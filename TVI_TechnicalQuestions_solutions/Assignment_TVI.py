@@ -1,3 +1,4 @@
+#Teresa George 
 # Load the required packages
 import urllib.request
 from PIL import Image
