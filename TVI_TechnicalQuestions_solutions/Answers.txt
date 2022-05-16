@@ -1,0 +1,21 @@
+Question 3:
+
+Highlight the types of file structures you could use to store the binary mask and object features to maximize read/write.
+The binary mask can be saved a .tif image or as a .mat or a numpy matrix. The object features can either be conveted to a dataframe and stored as a 
+.csv file with the labels for the various features. You can also use python pickle to store it as it serializes the python object.
+
+Question 4:
+How you would validate the metric across the dataset
+The metric can be validated by careful visual inspection of the images and by comparing it with a ground truth image. 
+
+Question 5:
+
+How you would scale your segmentation and signal processing algorithms developed in TQ2 and TQ4 to process a series of data consisting of 200 such image sections?
+Please address input/output requirements, datastructures/libraries utilized, computational limitations, etc...
+
+If we need to read and process large number of images several methods can be used to optimize memory usage:
+1) Resize the images to make it more memory efficient
+2) Use Pytorch DataLoader to load the images in batches
+3) Change the data type. For example use float32 instead of float64
+
+There is still going to memory limitation based on the system, hence we can use a server like AWS to run large volumes of data. 
